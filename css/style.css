@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  text-decoration: none !important;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+}
+:root {
+    --background: linear-gradient(45deg, #2b2e3b, #1a1c24);
+    --primary-color: #2b2e3b; 
+    --main-color: #FFCC00;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  color: #fff;
+  background: var(--primary-color);
+}
+
+.primary-text {
+  color: var(--main-color);
+}
+
+/* header {
+  padding: .8rem 10%;
+} */
+/* section {
+  padding: 2rem 10%;
+} */
+header img {
+  width: 40px;
+}
+.profile {
+  border-radius: 10px 0 0 10px;
+}
+header img, .profile img {
+  filter: drop-shadow(0px 0px 5px #fff);
+}
+.card {
+  border: none;
+}
+.card img {
+  width: 150px;
+  filter: drop-shadow(0px 0px 5px #fff);
+}
+img.overlay {
+  position: absolute;
+  width: 230px;
+  padding: 1.5rem;
+  filter: drop-shadow(0px 0px 2px #fff);
+}
+.card-body {
+  /* background-image: url(../images/game.png); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 250px;
+  filter: drop-shadow(0px 0px 10px #494964);
+  border: 3px solid #525286;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+.card-footer {
+  position: relative;
+  border: 2px solid #dbdada;
+  box-shadow: 0 0 5px #fff, inset 0 0 20px 10px rgba(138, 118, 227, 0.3);
+  overflow: hidden;
+  height: 180px;
+}
+.card-footer::before {
+  content: "";
+  position: absolute;
+  background: #dbdada;
+  box-shadow: 0 0 3px #fff;
+  top: -10px; left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 20px;
+  border-radius: 100px;
+}
+.pokemon-type {
+  position: absolute;
+  width: 120px;
+  border-radius: 30px;
+  padding: 3px 20px;
+  font-size: 15px;
+}
+.pokemon-type.one {
+  bottom: 10px;
+  left: 20px;
+}
+.pokemon-type.two {
+  bottom: 10px;
+  right: 20px;
+}
+.pokemon-number {
+  color: #b3abab;
+}
+#load-more-btn {
+  width: 500px;
+  border-radius: 30px;
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 5px var(--main-color), inset 0 0 3px var(--main-color);
+  text-shadow: 0 0 2px var(--main-color);
+  background: transparent;
+  margin-bottom: 3rem;
+  color: var(--main-color);
+  transition: .2s ease;
+}
+#load-more-btn:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+.pokemon-list, .favorite-pokemon {
+  margin: 11px 0;
+}
+.favorites::-webkit-scrollbar{
+  width: 0rem;
+}
+.favorites {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/bg.jpg);
+  background-size: cover;
+  overflow-y: hidden;
+  min-height: 725px;
+  max-height: 725px;
+  border-radius: 0 10px 10px 0;
+}
+.favorites:hover {
+  overflow-y: auto;
+}
+.favorites h2 {
+  background: #5c8cce;
+}
+.star {
+  position: absolute;
+  top: 5px; right: 8px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.star.active {
+  color: #FFCC00;
+}
+.type-list {
+  width: 100px;
+  border-radius: 30px;
+  padding: 3px 20px;
+  font-size: 15px;
+}
+.title {
+  width: 300px;
+  color: var(--main-color);
+  margin: auto;
+  text-shadow: 0 0 5px var(--main-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 5px var(--main-color), inset 0 0 3px var(--main-color);
+  border-radius: 20px;
+  padding: .5rem;
+  transition: .3s ease;
+}
+.title:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+.newest-fave {  
+  height: 150px;
+}
+.newest-fave .col-5, .newest-fave .col {
+  border: 2px solid #fff;
+  box-shadow: 0 0 7px #fff, inset 0 0 4px #fff;
+  position: relative;
+  overflow: hidden;
+}
+.newest-fave .col-5 {
+  border-radius: 10px 0 0 10px;
+}
+.newest-fave .col {
+  border-left: none;
+  border-radius: 0 30% 30% 0;
+}
+.galaxy-background {
+  background: radial-gradient(circle, #121111 0%, #0a0a2a 70%, #19194f 100%);
+  color: #ffffff;
+  padding: 10px;
+}
+.dropdown-menu {
+  width: 250px;
+  box-shadow: 0 0 5px var(--main-color), inset 0 0 3px var(--main-color);
+}
+.dropdown-menu img {
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .pokemon-type {
+    width: 105px;
+  }
+}
+@media (max-width: 1200px) {
+  .profile {
+    border-radius: 10px;
+  }
+  .favorites {
+    border-radius: 10px;
+  }
+}
+@media (max-width: 576px) {
+  #load-more-btn {
+    width: 100%;
+    margin: auto;
+  }
+  .title {
+    width: 100%;
+  }
+  #current-icon {
+    width: 100%;
+    max-width: 50px;
+  }
+  .x-small {
+    font-size: 13px;
+  }
+}
